@@ -1,0 +1,18 @@
+[package]
+name = "copyq-ui"
+version = "0.1.0"
+edition = "2021"
+description = "Lightweight, secure GTK4 popup UI for CopyQ on Linux Mint Cinnamon"
+license = "MIT"
+
+# Security-by-design: ONLY one direct dependency (official GTK4 bindings).
+# Zero networking, zero telemetry, zero shell execution, zero temp files.
+[dependencies]
+gtk4 = { version = "0.9", features = ["v4_14"] }
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"

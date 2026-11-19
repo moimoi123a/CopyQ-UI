@@ -1,0 +1,419 @@
+/*
+ * CopyQ-UI GTK4 Stylesheet
+ * File này được tự động sao chép vào ~/.config/copyq-ui/style.css
+ * Bạn có thể sửa màu sắc, bo góc, cỡ chữ ngay tại đó rồi bấm Win+V để thấy kết quả (không cần build lại).
+ */
+
+/* ===== Cửa sổ ngoài trong suốt để bo góc sạch ===== */
+window.popup-window {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.popup-container {
+    border-radius: 14px;
+    border: 1px solid #3a3f48;
+}
+
+/* ===== Thanh tiêu đề (Logo CopyQ | Tìm kiếm | Đổi Sáng/Tối) ===== */
+.header-bar {
+    padding: 10px 10px 9px 10px;
+    border-bottom: 1px solid #3a3f48;
+}
+
+.copyq-logo {
+    margin-right: 2px;
+}
+
+.search-input {
+    min-height: 30px;
+    border-radius: 8px;
+    padding: 0 8px;
+    font-size: 12.5px;
+    box-shadow: none;
+}
+
+.theme-toggle-btn {
+    min-width: 30px;
+    min-height: 30px;
+    padding: 0;
+    border-radius: 8px;
+}
+
+/* ===== Thanh lọc (Tất cả / Đã ghim / Ảnh) ===== */
+.filter-bar {
+    padding: 8px 10px 6px 10px;
+}
+
+.filter-tab {
+    min-height: 24px;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* ===== Danh sách thẻ ===== */
+.clip-scroll {
+    background-color: transparent;
+}
+
+.clip-list {
+    background-color: transparent;
+    padding: 2px 10px 10px 10px;
+}
+
+.clip-list > row.clip-row {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 7px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+.clip-list > row.clip-row:last-child {
+    margin-bottom: 0;
+}
+
+.clip-card {
+    padding: 9px 8px 9px 12px;
+    border-radius: 9px;
+}
+
+.clip-card-image {
+    padding: 6px 6px 6px 6px;
+    border-radius: 9px;
+}
+
+.clip-text {
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+/* Khung ảnh nền trơn sạch (không kẻ ô caro) */
+.img-frame {
+    border-radius: 7px;
+}
+
+/* ===== Nút hành động xếp dọc trên-dưới (⋯ và Ghim) ===== */
+.card-icon-btn,
+.card-menu-btn > togglebutton {
+    min-width: 24px;
+    min-height: 24px;
+    padding: 0;
+    border-radius: 6px;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* Popover menu của nút ⋯ */
+popover.card-popover > contents {
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.popover-action-btn {
+    min-height: 28px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    font-size: 12.5px;
+}
+
+/* ===== Trạng thái trống / thông báo ===== */
+.empty-label {
+    font-size: 12.5px;
+    padding: 24px 16px;
+}
+
+/* ===== Thanh gợi ý phím tắt dưới cùng ===== */
+.footer-bar {
+    padding: 6px 12px;
+    border-top: 1px solid #3a3f48;
+    font-size: 11.5px;
+}
+
+/* ===== Lớp phủ phóng to ảnh ===== */
+.zoom-overlay {
+    border-radius: 14px;
+    padding: 12px;
+    background-color: rgba(16, 18, 22, 0.95);
+    color: #eef1f5;
+}
+
+.zoom-title {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #d6dce6;
+}
+
+.zoom-close-btn {
+    min-height: 26px;
+    padding: 2px 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.zoom-close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.24);
+}
+
+.zoom-frame {
+    border-radius: 8px;
+    background-color: #16181c;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 6px;
+}
+
+.zoom-paste-btn {
+    min-height: 32px;
+    border-radius: 8px;
+    border: none;
+    background-color: #5294e2;
+    color: #ffffff;
+    font-size: 12.5px;
+    font-weight: 600;
+}
+
+.zoom-paste-btn:hover {
+    background-color: #63a2ec;
+}
+
+/* ============================================================
+ * DARK THEME (.theme-dark)
+ * ============================================================ */
+window.theme-dark .popup-container {
+    background-color: #1e2024;
+    border-color: #3a3f48;
+    color: #eef1f5;
+}
+
+window.theme-dark .header-bar {
+    border-bottom-color: #333841;
+}
+
+window.theme-dark .search-input {
+    background-color: #16181c;
+    color: #eef1f5;
+    border: 1px solid #353a43;
+}
+
+window.theme-dark .search-input:focus-within {
+    border-color: #5294e2;
+}
+
+window.theme-dark .theme-toggle-btn {
+    background-color: #292c32;
+    color: #eef1f5;
+    border: 1px solid #3a3f48;
+}
+
+window.theme-dark .theme-toggle-btn:hover {
+    background-color: #343841;
+}
+
+window.theme-dark .filter-tab {
+    color: #949ca8;
+}
+
+window.theme-dark .filter-tab:hover {
+    color: #eef1f5;
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+window.theme-dark .filter-tab.is-active {
+    background-color: rgba(82, 148, 226, 0.20);
+    color: #6ea8f0;
+}
+
+window.theme-dark .clip-list > row.clip-row {
+    background-color: #292c32;
+}
+
+window.theme-dark .clip-list > row.clip-row:hover {
+    background-color: #32363e;
+}
+
+window.theme-dark .clip-list > row.clip-row:selected {
+    background-color: #2e3847;
+    border-color: #5294e2;
+}
+
+window.theme-dark .clip-text {
+    color: #eef1f5;
+}
+
+window.theme-dark .img-frame {
+    background-color: #16181c;
+}
+
+window.theme-dark .card-icon-btn,
+window.theme-dark .card-menu-btn > togglebutton {
+    color: #949ca8;
+}
+
+window.theme-dark .card-icon-btn:hover,
+window.theme-dark .card-menu-btn > togglebutton:hover {
+    background-color: rgba(255, 255, 255, 0.10);
+    color: #eef1f5;
+}
+
+window.theme-dark .card-icon-btn.is-pinned {
+    color: #5ea0ee;
+}
+
+window.theme-dark popover.card-popover > contents {
+    background-color: #23262c;
+    border: 1px solid #3a3f48;
+    color: #eef1f5;
+}
+
+window.theme-dark .popover-action-btn {
+    color: #eef1f5;
+}
+
+window.theme-dark .popover-action-btn:hover {
+    background-color: rgba(255, 255, 255, 0.09);
+}
+
+window.theme-dark .popover-action-btn.danger-btn {
+    color: #f87171;
+}
+
+window.theme-dark .popover-action-btn.danger-btn:hover {
+    background-color: rgba(248, 113, 113, 0.14);
+}
+
+window.theme-dark .empty-label {
+    color: #949ca8;
+}
+
+window.theme-dark .footer-bar {
+    border-top-color: #333841;
+    color: #8b93a0;
+}
+
+/* ============================================================
+ * LIGHT THEME (.theme-light)
+ * ============================================================ */
+window.theme-light .popup-container {
+    background-color: #f3f4f6;
+    border-color: #d4d9e2;
+    color: #1c2026;
+}
+
+window.theme-light .header-bar {
+    border-bottom-color: #dce1e8;
+}
+
+window.theme-light .search-input {
+    background-color: #ffffff;
+    color: #1c2026;
+    border: 1px solid #cfd6e0;
+}
+
+window.theme-light .search-input:focus-within {
+    border-color: #2f7de1;
+}
+
+window.theme-light .theme-toggle-btn {
+    background-color: #ffffff;
+    color: #1c2026;
+    border: 1px solid #cfd6e0;
+}
+
+window.theme-light .theme-toggle-btn:hover {
+    background-color: #e9edf3;
+}
+
+window.theme-light .filter-tab {
+    color: #636c7a;
+}
+
+window.theme-light .filter-tab:hover {
+    color: #1c2026;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+window.theme-light .filter-tab.is-active {
+    background-color: rgba(47, 125, 225, 0.14);
+    color: #246bc7;
+}
+
+window.theme-light .clip-list > row.clip-row {
+    background-color: #ffffff;
+    border-color: #e4e8ef;
+}
+
+window.theme-light .clip-list > row.clip-row:hover {
+    background-color: #f7f9fc;
+}
+
+window.theme-light .clip-list > row.clip-row:selected {
+    background-color: #e8f1fc;
+    border-color: #2f7de1;
+}
+
+window.theme-light .clip-text {
+    color: #1c2026;
+}
+
+window.theme-light .img-frame {
+    background-color: #e9edf2;
+}
+
+window.theme-light .card-icon-btn,
+window.theme-light .card-menu-btn > togglebutton {
+    color: #687280;
+}
+
+window.theme-light .card-icon-btn:hover,
+window.theme-light .card-menu-btn > togglebutton:hover {
+    background-color: rgba(0, 0, 0, 0.07);
+    color: #1c2026;
+}
+
+window.theme-light .card-icon-btn.is-pinned {
+    color: #2f7de1;
+}
+
+window.theme-light popover.card-popover > contents {
+    background-color: #ffffff;
+    border: 1px solid #d4d9e2;
+    color: #1c2026;
+}
+
+window.theme-light .popover-action-btn {
+    color: #1c2026;
+}
+
+window.theme-light .popover-action-btn:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+window.theme-light .popover-action-btn.danger-btn {
+    color: #dc2626;
+}
+
+window.theme-light .popover-action-btn.danger-btn:hover {
+    background-color: rgba(220, 38, 38, 0.09);
+}
+
+window.theme-light .empty-label {
+    color: #687280;
+}
+
+window.theme-light .footer-bar {
+    border-top-color: #dce1e8;
+    color: #687280;
+}
